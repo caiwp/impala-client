@@ -1,0 +1,78 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "ATEvY2YIOTZfAjfai7aRBfcZNiY=",
+			"path": "git.apache.org/thrift.git/lib/go/thrift",
+			"revision": ""
+		},
+		{
+			"checksumSHA1": "WADPpwK1WFuckYzPU5RAhnZrlcU=",
+			"path": "github.com/koblas/impalathing",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "fY3cKbYRz7ZmtWOvc3lVxOiNFz4=",
+			"path": "github.com/koblas/impalathing/services/beeswax",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "nWZnak4SVz4pbInlsrLbi1uyahY=",
+			"path": "github.com/koblas/impalathing/services/cli_service",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "4D2SKmJlNlT5AQilQ1dOlgcZ2yw=",
+			"path": "github.com/koblas/impalathing/services/fb303",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "pVkfQN7GQdFYZRHt4bFtgtu3wLc=",
+			"path": "github.com/koblas/impalathing/services/hive_metastore",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "kJg3YXaQUrDuc/BP/x2tIxqy+dY=",
+			"path": "github.com/koblas/impalathing/services/impalaservice",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "pfoM46Ho5/8da/nl0S79arpWRPg=",
+			"path": "github.com/koblas/impalathing/services/status",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "MNkKJyk2TazKMJYbal5wFHybpyA=",
+			"path": "github.com/mattn/go-runewidth",
+			"revision": "14207d285c6c197daabb5c9793d63e7af9ab2d50",
+			"revisionTime": "2017-02-01T02:35:40Z"
+		},
+		{
+			"checksumSHA1": "h+oCMj21PiQfIdBog0eyUtF1djs=",
+			"path": "github.com/olekukonko/tablewriter",
+			"revision": "febf2d34b54a69ce7530036c7503b1c9fbfdf0bb",
+			"revisionTime": "2017-01-28T05:05:32Z"
+		},
+		{
+			"checksumSHA1": "XMbFUjCgOeWPM1znwtcmOUjY7OM=",
+			"path": "gopkg.in/ini.v1",
+			"revision": "300e940a926eb277d3901b20bdfcc54928ad3642",
+			"revisionTime": "2017-03-13T04:11:30Z"
+		},
+		{
+			"checksumSHA1": "rL5r44ASTGubGW88gqQwlvVQshw=",
+			"path": "gopkg.in/op/go-logging.v1",
+			"revision": "b2cb9fa56473e98db8caba80237377e83fe44db5",
+			"revisionTime": "2016-02-11T21:21:56Z"
+		}
+	],
+	"rootPath": "github.com/caiwp/impala-client"
+}

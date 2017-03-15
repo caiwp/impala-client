@@ -22,3 +22,10 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+# IDE
+.idea
+
+/impala-client
+
+/log
