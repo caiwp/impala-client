@@ -1,51 +1,39 @@
 package main
 
 import (
-    "fmt"
     "time"
 
+    "code.gitea.io/gitea/modules/log"
     "github.com/caiwp/impala-client/modules/setting"
-    "github.com/koblas/impalathing"
-    "github.com/caiwp/impala-client/modules/log"
     "github.com/caiwp/impala-client/modules/table"
 )
 
-var (
-    l = log.NewLogger("default")
-
-    impalaRes []map[string]interface{}
-)
-
 func main() {
+    GlobalInit()
+
     t0 := time.Now()
     defer func() {
-        l.Info("End time duration: %.4fs", time.Since(t0).Seconds())
+        log.Warn("End time duration: %.4fs", time.Since(t0).Seconds())
+        setting.ImplConn.Close()
+        log.Close()
     }()
 
-    host := setting.GetHost()
-    port := setting.GetPort()
-    database := setting.GetDatabase()
+    query := setting.Req.Query
+    log.Trace(query)
 
-    conn, err := impalathing.Connect(host, port, impalathing.DefaultOptions)
+    res, err := setting.ImplConn.Query(query)
     if err != nil {
-        l.Error("connet failed: %s", err)
+        log.Fatal(4, "request query [%s] failed: %v", query, err)
         return
     }
-    defer conn.Close()
 
-    _, err = conn.Query(fmt.Sprintf("USE %s", database))
+    impalaRes := res.FetchAll()
 
-    if err != nil {
-        panic(err)
-    }
+    table.Show(impalaRes, setting.Req.Headers)
+    return
+}
 
-    var query string
-    query = setting.GetQuery()
-    l.Warning(query)
-
-    res, err := conn.Query(query)
-
-    impalaRes = res.FetchAll()
-
-    table.Show(impalaRes, setting.GetHeaders())
+func GlobalInit() {
+    setting.NewContext()
+    setting.NewServices()
 }

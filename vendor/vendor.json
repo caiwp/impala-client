@@ -3,9 +3,22 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "e9P5JiyxayYIam3QxasGMX4IAys=",
+			"path": "code.gitea.io/gitea/modules/log",
+			"revision": "608cd54a685a2de0f7ba2888f36d86307bd5b310",
+			"revisionTime": "2017-03-17T14:24:51Z"
+		},
+		{
 			"checksumSHA1": "ATEvY2YIOTZfAjfai7aRBfcZNiY=",
 			"path": "git.apache.org/thrift.git/lib/go/thrift",
 			"revision": ""
+		},
+		{
+			"checksumSHA1": "1BBE89UpNp+qVvrF5oKdRLTaBJc=",
+			"origin": "code.gitea.io/gitea/vendor/github.com/go-xorm/core",
+			"path": "github.com/go-xorm/core",
+			"revision": "608cd54a685a2de0f7ba2888f36d86307bd5b310",
+			"revisionTime": "2017-03-17T14:24:51Z"
 		},
 		{
 			"checksumSHA1": "WADPpwK1WFuckYzPU5RAhnZrlcU=",
