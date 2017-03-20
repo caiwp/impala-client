@@ -14,6 +14,12 @@
 			"revision": ""
 		},
 		{
+			"checksumSHA1": "ly9VLPE9GKo2U7mnbZyjb2LDQ3w=",
+			"path": "github.com/Unknwon/com",
+			"revision": "28b053d5a2923b87ce8c5a08f3af779894a72758",
+			"revisionTime": "2015-10-08T13:54:07Z"
+		},
+		{
 			"checksumSHA1": "1BBE89UpNp+qVvrF5oKdRLTaBJc=",
 			"origin": "code.gitea.io/gitea/vendor/github.com/go-xorm/core",
 			"path": "github.com/go-xorm/core",
