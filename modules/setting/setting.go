@@ -10,6 +10,7 @@ import (
     "fmt"
     "github.com/koblas/impalathing"
     "path/filepath"
+    "os/exec"
 )
 
 var (
@@ -29,13 +30,29 @@ func init() {
     log.NewLogger(0, "console", `{"level": 0}`)
 
     var err error
-    if AppPath, err = filepath.Abs("."); err != nil {
+    if AppPath, err = execPath(); err != nil {
         log.Fatal(4, "failed to get app path: %v.", err)
     }
 }
 
+func execPath() (string, error) {
+    f, err := exec.LookPath(os.Args[0])
+    if err != nil {
+        return "", err
+    }
+    return filepath.Abs(f)
+}
+
 func WorkDir() string {
-    return AppPath
+    wd := os.Getenv("FLUME_CLIENT_WORK_DIR")
+    if len(wd) > 0 {
+        return wd
+    }
+    i := strings.LastIndex(AppPath, "/")
+    if i == -1 {
+        return AppPath
+    }
+    return AppPath[:i]
 }
 
 func NewContext() {
@@ -43,7 +60,6 @@ func NewContext() {
     Cfg = ini.Empty()
 
     workDir := WorkDir()
-
     conf := workDir + "/conf/app.ini"
     if com.IsFile(conf) {
         if err = Cfg.Append(conf); err != nil {
